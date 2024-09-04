@@ -1,27 +1,27 @@
 import React from 'react';
-import { Route, Routes} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from './componets/Home';
-import BrowseCharacter from './componets/BrowseCharacters';
-import CharacterDetails from './componets/CharacterDetails';
+import BrowseCharacters from './componets/BrowseCharacters';
+import CharacterDetail from './componets/CharacterDetails';
 import Comics from './componets/Comics';
 import NotFound from './componets/Notfound';
 import Navigation from './componets/Navigation';
+import './App.css'
 
-function App() {
-  <div className='app-container'>
+
+const App = () => {
+  return (
     <Router>
-      <Navigation />
-   
+      <Navigation /> 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/characters" element={<BrowseCharacter />} />
-        <Route path="/characters/:id" element={<CharacterDetails />} />
-        <Route path="/comics" element={<Comics />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="/browse-characters" element={<BrowseCharacters />} />
+        <Route path="/character-details/1" element={<CharacterDetail />} />
+        <Route path='/comics' element={<Comics />} />
+        <Route path='*' element={<NotFound />} />
       </Routes>
-    </Router>
-  </div>
+      </Router>
+  );
 };
-  
 
 export default App;

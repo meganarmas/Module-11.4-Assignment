@@ -1,23 +1,17 @@
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { Navbar} from "react-bootstrap";
+import React from "react";
 
-const Navigation = () => {
-    return (
-        <nav className="nav-bar">
-            <NavLink to="/" exact activeClassName="active">
-                Home 
-            </NavLink>
-            <NavLink to="/browse-characters" exact activeClassName="active">
-                Browse Characters
-            </NavLink>
-            <NavLink to="/detail-characters" exact activeClassName="active">
-                Detail Characters
-            </NavLink>
-            <NavLink to="/comics" exact activeClassName="active">
-                Comics
-            </NavLink>
-          
-        </nav>
+function NavigationBar() {
+
+    return(
+        <Navbar className="navbar" expand="lg">
+            <Navbar.Brand as={Link} to="/home">Home</Navbar.Brand> <br />
+            <Navbar.Brand as={Link} to="/browse-characters">Browse Character</Navbar.Brand> <br />
+            <Navbar.Brand as={Link} to="/character-details/1">Character Details</Navbar.Brand> <br />
+            <Navbar.Brand as={Link} to="/comics">Comics</Navbar.Brand> <br />
+        </Navbar>
     );
 }
 
-export default Navigation;
+export default NavigationBar;
