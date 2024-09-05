@@ -8,7 +8,7 @@ function NavigationBar() {
         <Navbar className="navbar" expand="lg">
             <Navbar.Brand as={Link} to="/home">Home</Navbar.Brand> <br />
             <Navbar.Brand as={Link} to="/browse-characters">Browse Character</Navbar.Brand> <br />
-            <Navbar.Brand as={Link} to="/character-details/1">Character Details</Navbar.Brand> <br />
+            <Navbar.Brand as={Link} to="/character-details/:id">Character Details</Navbar.Brand> <br />
             <Navbar.Brand as={Link} to="/comics">Comics</Navbar.Brand> <br />
         </Navbar>
     );
